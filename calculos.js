@@ -1,6 +1,8 @@
 var operacion1;
 var operacion2;
 var calculo;
+var n1;
+var r;
 function init(){
     var resultado= document.getElementById("resultado");
     var reset= document.getElementById('reset');
@@ -11,8 +13,8 @@ function init(){
     var division= document.getElementById('division');
     var pi= document.getElementById("pi");
     var igual= document.getElementById("igual");
-    var del= document.getElementById("del");
-    var ac= document.getElementById("ac");
+    var borrar= document.getElementById("borrar");
+    var borrar_num= document.getElementById("borrar_num");
     var uno= document.getElementById("uno");
     var dos= document.getElementById("dos");
     var tres= document.getElementById("tres");
@@ -58,6 +60,9 @@ function init(){
     cero.onclick = function(e){
         resultado.textContent = resultado.textContent  + "0";
     }
+    punto.onclick = function(e){
+        resultado.textContent = resultado.textContent  + ".";
+    }
    
     suma.onclick=function(e){
         operacion1 = resultado.textContent;
@@ -75,9 +80,14 @@ function init(){
         calculo= "*";
         limpiar();
     }
-   
+    division.onclick=function(e){
+        operacion1 = resultado.textContent;
+        calculo= "/";
+        limpiar();
+    }
+    
     igual.onclick=function(e){
-        operacion2 = resultado.textContent;
+        operacion1 = resultado.textContent;
         resolver();
     }
 }
@@ -109,8 +119,12 @@ function resolver(){
             case "/":
                 resul = parseFloat(operacion1) / parseFloat (operacion2)
                 break;     
-
-   }
    resetear();
    resultado.textContent = resul;
+   }
+}
+function sin(n1){
+    //Funcion del seno de un numero
+    r = Math.sin(n1);
+    return r;
 }
