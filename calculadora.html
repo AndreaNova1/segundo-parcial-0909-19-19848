@@ -1,22 +1,28 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="utf-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Calculadora</title>
         <link type="text/css" href="estilos.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     </head>
-    <body>
+    <body onloand="init();">
+        
         
         <div class="container-Calculadora">
-            <br>
+            
+            <span id="resultado"></span>            
             <div class="linea"></div>
             <p class="fant">Calculadora Cientifica</p>
             
-
+            
     <table class="calculadora">
-            <tr>
-                <td colspan ="4"><span id="resultado"></span>
-                </td>
-            </tr>
+      
+            
             <tr>
                 <td><button id="parentesis1">(</button></td>
                 <td><button id="parentesis2">)</button></td>
@@ -27,45 +33,148 @@
             </tr>
             <tr>
                 <td><button id="potencia">^</button></td>
-                <td><button id="grados">° ' ''</button></td>
+                <td><button id="grados">°</button></td>
                 <td><button id="porcentake">%</button></td>
                 <td><button id="coma">,</button></td>
                 <td><button id="logaritmo">log</button></td>
-                <td><button id="log natural">In</button></td>
+                <td><button id="log natural">ln</button></td>
             </tr>
-            <tr>
-                <td><button id="redondear">int</button></td>
-                <td><button id="aleatorio">rnd</button></td>
-                <td><button id="random">rnd</button></td>
-            </tr>
-                <table class="basica">
-            <p class="new">Basica</p>
-            <tr>
-                <td colspan ="4"><span id="resultado"></span>
-                </td>
-            </tr>
-            <tr>
-                <td><button id="siete">7</button></td>
-                <td><button id="ocho">8</button></td>
-                <td><button id="nueve">9</button></td>
-            </tr>
-            <tr>
-                <td><button id="cuatro">4</button></td>
-                <td><button id="cinco">5</button></td>
-                <td><button id="seis">6</button></td>
-            </tr>
-            <tr>
-                <td><button id="uno">1</button></td>
-                <td><button id="dos">2</button></td>
-                <td><button id="tres">3</button></td>
-            </tr>
-            <tr>
-                <td><button id="cero">0</button></td>
-                <td><button id="punto">.</button></td>
-            </tr>
-            </table>
-        </table>
+    </table>
 
+    <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+                <table class="basica">
+                    <p class="new">Basica</p>
+                
+                    <tr>
+                        
+                        <td><button id="siete">7</button></td>
+                        <td><button id="ocho">8</button></td>
+                        <td><button id="nueve">9</button></td>
+                    
+                        
+                    </tr>
+
+                    <tr>
+                        <td><button id="cuatro">4</button></td>
+                        <td><button id="cinco">5</button></td>
+                        <td><button id="seis">6</button></td>
+                        
+                    
+                        
+                    </tr>
+                    <tr>
+                        <td><button id="uno">1</button></td>
+                        <td><button id="dos">2</button></td>
+                        <td><button id="tres">3</button></td>
+                        
+                        
+                        
+                    </tr>
+                    <tr>
+                        &nbsp;&nbsp; &nbsp; &nbsp;     
+                        <td><button id="cero">0</button></td>
+                        <td><button id="punto">.</button></td>
+                        
+                    </tr>
+                </table>
+            </div>    
+        
+
+            <div class="col-md-6 offset-md-1">
+                <br>
+                <br>
+                <br>
+
+                    <table class="operadores">
+
+                                <tr>
+                                    <th><button class="col-12" id="del">DEL</button></th>
+                                    <th><button class="col-12" id="ac">AC</button></th>
+                                </tr>
+                            
+                                    <tr>
+                                        <td><button id="masmenos">±</button></td>
+                                        <td><button id="suma">+</button></td>
+                                        <td><button id="resta">-</button></td> 
+                                        
+                                </tr>
+                                <tr>
+                                    <td><button id="multiplicacion">*</button></td>
+                                    <td><button id="division">/</button></td>
+                                    <td><button id="pi">π</button></td>
+                                </tr>
+                                
+                                <tr>
+                                    <th><button class="col-12" id="igual">=</button></th>
+                                </tr>
+                    </table>
+            </div>
+        </div>    
     </div>
-    </body>
+                
+       
+        <center>
+        <button  type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Datos del Alumno</button>
+        </center>
+    
+    
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" style="align-content: center" id="exampleModalLabel">Datos del Alumno </h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+    
+    
+                    <form  method="POST">
+                      
+                        <div class="row">
+                            <div class="col-6 offset-1">
+                                <div class="form-group">
+                                    <label>Carné:</label> <b> 0909-19-19848</b>
+                                    
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="row">
+                            <div class="col-6 offset-1">
+                                <div class="form-group">
+                                    <label>Nombre completo:</label> <b> Andrea Fernanda Nova López</b>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="row">
+                            <div class="col-6 offset-1">
+                                <div class="form-group">
+                                    <label>Fecha y horario de finalización:</label> <b> 19/09/2021 23:59</b>
+                                 </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6 offset-1">
+                                <div class="form-group">
+                                    <label>Nota esperada según rendimiento:</label> <b> 20 pts </b>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer" >
+    
+                            <button type="submit" name="btnEnviar" class="btn btn-primary">Suscribirse</button>
+                        </div>
+                    </form>
+                </div>
+        </div>
+
+    
+  <script src="calculos.js"></script>
+  
+</body>
 </html>

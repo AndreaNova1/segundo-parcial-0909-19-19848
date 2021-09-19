@@ -1,23 +1,38 @@
 body{
-    padding: 20px;
+    padding: 70px;
     margin: 0;
     background-color: rgb(180, 7, 79);
 }
+
 .linea {
     border-top: 3px solid rgb(255, 98, 182);;
     height: 2px;
-    width: 800px;
+    width: 500px;
     margin: 20px;
   }
 .container-Calculadora{
     display: block;
     margin: 0 auto;
-    padding: 40 px;
-    width: 655 px;
-    height: 655px;
-    background-color: rgb(28, 31, 31);
-    box-shadow: 2px, 1px, 29 px, 6px;
+    padding: 20px;
+    width: 600px;
+    height: 700px;
+    border-radius: 25px;
+    background-color: #414041;
+   
 }
+#resultado{
+    display: block;
+    color:rgb(244, 247, 248);
+    text-align:center ;
+    font-size: 50px;
+    margin-bottom: 50px;
+    width: 200px;
+    height: 50px;
+    line-height: 100px;
+    background: none;
+   
+}
+
 p.fant {
     font-family: cursive;
     background: none;
@@ -37,6 +52,7 @@ p.fant {
         color: rgb(244, 247, 248);
         float:left; border: 3px solid rgb(255, 98, 182);
 }
+
 p.new {
     background: none;
     color: rgb(244, 247, 248);
@@ -55,4 +71,52 @@ p.new {
     background: none;
     color: rgb(244, 247, 248);
     float:left; border: 3px solid rgb(255, 98, 182);
+}
+#del {
+    width:80px;
+    height:50px;
+    margin-left: 25px;
+    text-align: center;
+     background:rgb(255, 98, 182);;
+    color:rgb(244, 247, 248) ;
+    float:left; border: 3px solid rgb(255, 98, 182);
+    
+}
+#ac {
+    width:80px;
+    height:50px;
+    margin-left: 25px;
+    text-align: center;
+    background: none;
+    color:rgb(244, 247, 248) ;
+    float:left; border: 3px solid rgb(255, 98, 182);
+    
+}
+#igual {
+    width:120px;
+    height:50px;
+    margin-left: 25px;
+    text-align: center;
+    background: none;
+    color:rgb(244, 247, 248) ;
+    float:left; border: 3px solid rgb(255, 98, 182);
+    
+}
+.operadores td button {
+    width:50px;
+    height:50px;
+    margin-left: 5px;
+    text-align: center;
+    border-radius: 55%;
+    background: none;
+    color: rgb(244, 247, 248);
+    float:left; border: 3px solid rgb(255, 98, 182);
+}
+
+
+
+
+.letra{
+    font-weight: bold ;
+    
 }
