@@ -14,7 +14,7 @@
     <body onloand="init();">
         <!--Diseño de la calculadora-->
         <div class="container-Calculadora">
-            
+
             <span id="resultado"></span>            
             <div class="linea"></div>
             <p class="fant">Cientifica</p>
@@ -24,7 +24,7 @@
             <tr>
                 <td><button id="parentesis1">(</button></td>
                 <td><button id="parentesis2">)</button></td>
-                <td><button id="seno">sin</button></td>
+                <td><button id="sin">sin</button></td>
                 <td><button id="coseno">cos</button></td>
                 <td><button id="tangente">tan</button></td>
                 <td><button id="raíz">√</button></td>
@@ -81,12 +81,13 @@
                 <br>
                 <div class="basic">
                     <div class="btn-group">
-                        <input type="button" value="DEL" class="button_del" id="borrar" onclick="del('C')">
-                        <input type="button" value="AC" class="button_ac" id="reset_num"onclick="AC()">
+                        <input type="button" value="DEL" class="button_del" id="borrar">
+                        <button class="button_ac" id="reset">AC</button>
+                        
                     </div>
                     <div class="btn-group">
                         <input type="button" value="±" class="button_op" id="masomenos" onclick="numbers.value += '±'">
-                        <input type="button" value="+" class="button_op" id="suma" onclick="numbers.value += '+'">
+                        <button  class="button_op" id="suma">+</button>
                         <input type="button" value="-" class="button_op" id="resta"onclick="numbers.value += '-'">              
                     </div>
                     <div class="btn-group">
@@ -95,11 +96,13 @@
                         <input type="button" value="π" class="button_op" id="pi"onclick="numbers.value += '3.141592'">
     
                     </div>
-                    <input type="button" value="=" class="button_igual" id="igual" onclick="igual('=')">
+                    <button  class="button_igual" id="igual">=</button>
+                    
                 </div>
             </div>
         </div>    
-        <br>
+        <br>  
+    
         
         <center>
         <button  type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Datos del Alumno</button>
@@ -124,7 +127,7 @@
                                     <label>Carné:</label> <b> 0909-19-19848</b>
                                     <label>Nombre completo:</label> <b> Andrea Fernanda Nova López</b>
                                     <label>Fecha y horario de finalización:</label> <b> 19/09/2021 23:59</b>
-                                    <label>Nota esperada según rendimiento:</label> <b> 20 pts </b>
+                                    <label>Nota esperada según rendimiento:</label> <b> 10 pts </b>
                                 </div>
                             </div>
                         </div>

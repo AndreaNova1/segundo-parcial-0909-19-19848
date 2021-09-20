@@ -1,9 +1,9 @@
 var operacion1;
 var operacion2;
 var calculo;
-var n1;
-var r;
+var numbres;
 function init(){
+    var input_content = document.getElementById("operation").value;
     var resultado= document.getElementById("resultado");
     var reset= document.getElementById('reset');
     var suma= document.getElementById('suma');
@@ -12,7 +12,7 @@ function init(){
     var multiplicacion= document.getElementById('multiplicacion');
     var division= document.getElementById('division');
     var pi= document.getElementById("pi");
-    var igual= document.getElementById("igual");
+    var igual= document.getElementById('igual');
     var borrar= document.getElementById("borrar");
     var borrar_num= document.getElementById("borrar_num");
     var uno= document.getElementById("uno");
@@ -26,7 +26,6 @@ function init(){
     var nueve= document.getElementById("nueve");
     var cero= document.getElementById("cero");
     var punto= document.getElementById("punto");
-
 }
     //Acciones
 {
@@ -63,13 +62,12 @@ function init(){
     punto.onclick = function(e){
         resultado.textContent = resultado.textContent  + ".";
     }
-   
     suma.onclick=function(e){
         operacion1 = resultado.textContent;
         calculo= "+";
         limpiar();
     }
-
+ 
     resta.onclick=function(e){
         operacion1 = resultado.textContent;
         calculo= "-";
@@ -85,13 +83,16 @@ function init(){
         calculo= "/";
         limpiar();
     }
-    
     igual.onclick=function(e){
-        operacion1 = resultado.textContent;
+        resul = resultado.textContent;
         resolver();
     }
+    reset.onclick=function(e){
+        resetear();
+
+    }
 }
-  
+
 function limpiar(){
     resultado.textContent = "";
 }
@@ -99,7 +100,7 @@ function resetear(){
     resultado.textContent = "";
     operacion1 = 0;
     operacion2 = 0;
-    calculo = 0;
+    calculo = "";
 }
 function resolver(){
    var resul = 0;
@@ -123,8 +124,44 @@ function resolver(){
    resultado.textContent = resul;
    }
 }
-function sin(n1){
-    //Funcion del seno de un numero
-    r = Math.sin(n1);
+
+function seno(operaciones){
+    r = Math.sin(operaciones);
+    return r;
+}
+
+function cos(n1){
+    //Funcion del coseno de un numero
+    r = Math.cos(n1);
+    return r;
+}
+
+function tan(n1){
+    //Funcion del tangente de un numero
+    r = Math.tan(n1);
+    return r;
+}
+
+function log(n1){
+    //Funcion de Logarritmo de un numero
+    r = Math.log(n1);
+    return r;
+}
+
+function pow(n1, n2){
+    //Funcion de Potencia
+    r = Math.pow(n1, n2);
+    return r;
+}
+
+function raiz(n1){
+    //Funcion de raiz cuadrada
+    r = Math.sqrt(n1);
+    return r;
+}
+
+function prc(n1, n2){
+    //Funcion de Potencia
+    r = ((n1/100)*n2);
     return r;
 }
