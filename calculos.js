@@ -84,9 +84,10 @@ function init(){
         limpiar();
     }
     igual.onclick=function(e){
-        resul = resultado.textContent;
+        operacion2=resultado.textContent;
         resolver();
     }
+    
     reset.onclick=function(e){
         resetear();
 
